@@ -1,0 +1,16 @@
+.chess th {
+    background: black;
+    color:white;
+}
+
+.chess td{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chess tr:nth-child(odd) td:nth-child(even),
+.chess tr:nth-child(even) td:nth-child(odd){
+    background: blue;
+}
