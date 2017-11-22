@@ -1,6 +1,20 @@
 <html>
-    <script src="board.js"></script>
-    <script src="app.js"></script>
-</html>
+    <head>
+        <script src="board.js"></script>
+        <script src="app.js"></script>
+        <script>
+            this.app = new app();
 
-<div id="app"></div>
+            document.onreadystatechange = function(event) {
+                if(document.readyState == "complete") {
+                    app.initialize();
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <button onclick="app.board.draw()">TEST</button>
+        <button onclick="app.play()">PLAY</button>
+        <button onclick="app.initialize()">RESET</button>
+    </body>
+</html>
