@@ -1,8 +1,18 @@
 function piece() {
     var _this = this;
 
-    _this.initialize(type) {
-        switch(type) {
+    _this.create = function(name, imagePath, move) {
+        var piece = {
+            name: name,
+            imagePath: imagePath,
+            move: move
+        };
+
+        return piece;
+    };
+
+    _this.initialize(name) {
+        switch(name) {
             case "fool":
                 break;
             case "king":
@@ -19,7 +29,7 @@ function piece() {
                 console.warn("invalid piece type " + type);
                 break;
         }
-    }
+    };
 
     return _this;
 }

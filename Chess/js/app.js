@@ -8,7 +8,7 @@ function app() {
     _this.initialize = function() {
         console.clear();
         _this.board = new board();
-        _this.board.draw();
+        _this.board.draw("board-section");
     };
 
     return _this;
