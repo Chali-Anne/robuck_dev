@@ -19,8 +19,25 @@ function board() {
                 var row = document.createElement('tr');
 
                 for(var j = 0; j < 8; ++j) {
-                    var column = i == 0 ? document.createElement('th') : document.createElement('td');
+                    var column;
 
+                    if(i == 0) {
+                        column = document.createElement('th');
+
+                        var text = document.createElement('p');
+                        text.textContent = j;
+
+                        column.appendChild(text);
+                    } else {
+                        column = document.createElement('td');
+
+                        if((i + j) % 2 == 1) {
+                            var imageDumb = document.createElement('img');
+                            imageDumb.setAttribute('src', 'img/square_brown_dark.png');
+
+                            column.appendChild(imageDumb);
+                        }
+                    }
                     row.appendChild(column);
                 }
 
@@ -29,8 +46,10 @@ function board() {
 
             table.appendChild(tableBody);
             boardContainer.appendChild(table);
+
+            console.log("drawing board");
         }
-        console.log("drawing board");
+
     };
 
     return _this;
