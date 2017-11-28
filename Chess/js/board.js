@@ -30,13 +30,6 @@ function board() {
                         column.appendChild(text);
                     } else {
                         column = document.createElement('td');
-
-                        if((i + j) % 2 == 1) {
-                            var imageDumb = document.createElement('img');
-                            imageDumb.setAttribute('src', 'img/square_brown_dark.png');
-
-                            column.appendChild(imageDumb);
-                        }
                     }
                     row.appendChild(column);
                 }
@@ -49,7 +42,6 @@ function board() {
 
             console.log("drawing board");
         }
-
     };
 
     return _this;
